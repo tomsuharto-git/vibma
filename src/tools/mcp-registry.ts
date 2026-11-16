@@ -18,6 +18,7 @@ import { registerMcpTools as registerStyles } from "./styles";
 import { registerMcpTools as registerVariables } from "./variables";
 import { registerMcpTools as registerLint } from "./lint";
 import { registerMcpTools as registerConnection } from "./connection";
+import { registerMcpTools as registerSlides } from "./slides";
 import { registerPrompts } from "./prompts";
 
 /** Register all MCP tools and prompts on the server */
@@ -39,5 +40,6 @@ export function registerAllTools(server: McpServer, sendCommand: SendCommandFn) 
   registerVariables(server, sendCommand);
   registerLint(server, sendCommand);
   registerConnection(server, sendCommand);
+  registerSlides(server, sendCommand);
   registerPrompts(server);
 }

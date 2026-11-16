@@ -16,6 +16,7 @@ import { figmaHandlers as stylesHandlers } from "./styles";
 import { figmaHandlers as variablesHandlers } from "./variables";
 import { figmaHandlers as lintHandlers } from "./lint";
 import { figmaHandlers as connectionHandlers } from "./connection";
+import { figmaHandlers as slidesHandlers } from "./slides";
 
 /** Merged dispatch map: command name → handler function */
 export const allFigmaHandlers: Record<string, (params: any) => Promise<any>> = {
@@ -36,4 +37,5 @@ export const allFigmaHandlers: Record<string, (params: any) => Promise<any>> = {
   ...variablesHandlers,
   ...lintHandlers,
   ...connectionHandlers,
+  ...slidesHandlers,
 };
